@@ -1,6 +1,8 @@
 self.addEventListener('install',(sw)=>{
   sw.waitUntil(
-   caches.open('static').addAll(['./Home.htm','./script.js','./style.css'])
+   caches.open('static').then((cache)=>{
+     cache.addAll(['./Home.htm','./script.js','./style.css'])
+   })
     )
 })
   
