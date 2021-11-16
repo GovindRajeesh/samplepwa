@@ -20,6 +20,6 @@ listest.querySelectorAll(".list-item").forEach((el)=>{
   })
 })
 
-navigator.serviceWorker.register('/sw.js').then(e=>{
+navigator.serviceWorker.register('./sw.js').then(e=>{
   console.log(e)
-})
+}).catch(e=>console.log(e))
